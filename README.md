@@ -1,5 +1,6 @@
 # VacuumPackerDZ400
 This is a project that resulted from a faulty vacuum packer - a PCB that showed 8.8. on the two-digit 7-segment display.
+
 Debug resulted in no obvious component faults. The PIC was running code that appeared to beep during boot up, and recognize each button was being pressed (by beeping when a button was pressed, and chirping when any button was held).
 A logic analyzer proved that the device beeped on boot up, and during long button presses. The logic analyzer also proved that the eeprom was being accessed during boot-up at 4 addresses (0x50, 0x51, 0x52, 0x53).
 It was assumed that these were for the temperature setting (configurable by user), the vacuum timer setting (configurable by user), the seal timer setting (configurable by user), and the cool timer setting (not configurable but loaded from EEPROM).
